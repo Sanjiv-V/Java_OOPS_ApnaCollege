@@ -28,9 +28,14 @@ public class Main {
 //        s1.age = 22;
 
         //Parameterized-------------------->
-        Student s1 = new Student("Sanjiv",22);
+        Student s1 = new Student();
+        s1.name="Sanjiv";
+        s1.age=22;
 
-        s1.printInfo();
+        Student s2 = new Student(s1);
+        s2.printInfo();
+
+
     }
 
 
@@ -62,13 +67,20 @@ class Student {
     // initializing class, that is when we use parameterize constructors
     // tidbit-> the 'Student()' when u define , the one with brackets is called contructors
     // this is basically for prodiving parameter for the argument, incase any
-    Student (String name, int age){
-        this.name=name;
-        this.age=age;
-    }
+//    Student (String name, int age){
+//        this.name=name;
+//        this.age=age;
+//    }
 
     // 3RD TYPE , COPY CONSTRUCTORS --->
+    // copy one object into another one
+    Student (Student s2){
+        this.name=s2.name;
+        this.age=s2.age;
+    }
+    Student (){
 
+    }
 }
 
 
